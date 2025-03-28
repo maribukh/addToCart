@@ -19,6 +19,7 @@ ul {
   margin: 3rem auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -59,10 +60,22 @@ h3 {
   margin-top: 2rem;
 }
 
-button {
+.card button {
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 0.8rem;
   margin: 1rem auto;
+}
+
+.main-container .cart {
+  width: 72.55%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart ul {
+  display: flex;
+  flex-direction: column;
 }

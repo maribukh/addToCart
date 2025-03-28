@@ -44,6 +44,24 @@ let products = [
     size: "100",
     numberPrice: 397,
   },
+  {
+    img: "https://iciparis.ge/uploads/image/2021-08-12/5074.jpg",
+    title: "BURBERRY",
+    description: "HERO",
+    price: "629",
+    discount: "397",
+    size: "100",
+    numberPrice: 397,
+  },
+  {
+    img: "https://iciparis.ge/uploads/image/2021-08-12/5074.jpg",
+    title: "BURBERRY",
+    description: "HERO",
+    price: "629",
+    discount: "397",
+    size: "100",
+    numberPrice: 397,
+  },
 ];
 
 function renderProducts(a) {
@@ -68,9 +86,49 @@ function renderProducts(a) {
             <li><img src="./stR.svg" alt="" /></li>
             <li><img src="./stR.svg" alt="" /></li>
           </ul>
-        <button>Add To Cart</button>
+        <button onclick=(addToCart('${a[i].title}',${a[i].price}))>Add To Cart</button>
         </div>
       </div> `;
+  }
+}
+
+let cart = [];
+
+function addToCart(title, price) {
+  cart.push({ title, price });
+
+  displayCart();
+}
+
+function displayCart() {
+  let cartItems = document.getElementById("cartItems");
+  let totalPrice = 0;
+
+  cartItems.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.textContent = `${item.title} - ${item.price}  ლარი`;
+    cartItems.appendChild(li);
+    li.onclick = function () {
+      delitem(index);
+    };
+
+    totalPrice += parseInt(item.price);
+  });
+
+  console.log(totalPrice);
+
+  document.getElementById("totalPrice").textContent = totalPrice;
+}
+
+function toggleCartDetails() {
+  let cartItems = document.getElementById("cartItems");
+
+  if (cartItems.style.display === "none" || cartItems.style.display === "") {
+    cartItems.style.display = "block";
+  } else {
+    cartItems.style.display = "none";
   }
 }
 
