@@ -12,19 +12,23 @@ ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  background-color: white;
+}
+
+ul:hover {
+  cursor: pointer;
 }
 
 .container {
   width: 72.55%;
   margin: 3rem auto;
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 18%;
-  border: 1px solid;
+  width: 20%;
 }
 
 .top {
@@ -68,14 +72,45 @@ h3 {
   margin: 1rem auto;
 }
 
-.main-container .cart {
+.cart {
   width: 72.55%;
-  margin: 3rem auto;
   display: flex;
   justify-content: flex-end;
+  top: 3rem;
+  right: 3rem;
+}
+
+.cart-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cart img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cart h3 span {
+  margin-right: 0.5rem;
 }
 
 .cart ul {
   display: flex;
   flex-direction: column;
+}
+.cart-center {
+
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+li span {
+  display: none;
+}
+li:hover span {
+  display: inline;
 }

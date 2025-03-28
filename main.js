@@ -108,9 +108,14 @@ function displayCart() {
 
   cart.forEach((item, index) => {
     let li = document.createElement("li");
-    li.textContent = `${item.title} - ${item.price}  ლარი`;
+    let del = document.createElement("span");
+    del.textContent = "⨉";
+    li.textContent = `${item.title} - ${item.price}  ლარი `;
+
+
+    li.appendChild(del);
     cartItems.appendChild(li);
-    li.onclick = function () {
+    del.onclick = function () {
       delitem(index);
     };
 
@@ -120,6 +125,11 @@ function displayCart() {
   console.log(totalPrice);
 
   document.getElementById("totalPrice").textContent = totalPrice;
+}
+
+function delitem(index) {
+  cart.splice(index, 1);
+  displayCart();
 }
 
 function toggleCartDetails() {
