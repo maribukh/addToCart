@@ -1,0 +1,36 @@
+@media screen and (max-width: 1520px) {
+    .card {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .card {
+        width: 26%;
+    }
+
+    ul li img {
+        width: 70%;
+        margin-top: 1rem;
+    }
+
+    .top {
+       width: 50%;
+        /* height: 150px; */
+    }
+
+    h1 {
+        font-size: 0.6rem;
+    }
+
+    h3 {
+        font-size: 0.5rem;
+    }
+
+    .discount p,
+    .discount span,
+    .price,
+    .add-to-cart {
+        font-size: 0.8rem;
+    }
+}
