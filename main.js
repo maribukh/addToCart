@@ -36,31 +36,31 @@ let products = [
     numberPrice: 108,
   },
   {
-    img: "https://iciparis.ge/uploads/image/2021-08-12/5074.jpg",
-    title: "BURBERRY",
-    description: "HERO",
-    price: "629",
-    discount: "397",
+    img: "https://iciparis.ge/uploads/image/2022-07-20/8837.png",
+    title: "BANDERAS",
+    description: "BLUE SEDUCTION MAN",
+    price: "116",
+    discount: "87",
     size: "100",
-    numberPrice: 397,
+    numberPrice: 87,
   },
   {
-    img: "https://iciparis.ge/uploads/image/2021-08-12/5074.jpg",
-    title: "BURBERRY",
-    description: "HERO",
-    price: "629",
-    discount: "397",
+    img: "https://iciparis.ge/uploads/image/2025-03-13/16264.png",
+    title: "VALENTINO",
+    description: "BORN IN ROMA",
+    price: "408",
+    discount: "326",
     size: "100",
-    numberPrice: 397,
+    numberPrice: 326,
   },
   {
-    img: "https://iciparis.ge/uploads/image/2021-08-12/5074.jpg",
-    title: "BURBERRY",
-    description: "HERO",
-    price: "629",
-    discount: "397",
+    img: "https://iciparis.ge/uploads/image/2022-08-22/9289.png",
+    title: "ARMANI",
+    description: "STRONGER WITH YOU",
+    price: "363",
+    discount: "290",
     size: "100",
-    numberPrice: 397,
+    numberPrice: 290,
   },
 ];
 
@@ -86,7 +86,7 @@ function renderProducts(a) {
             <li><img src="./stR.svg" alt="" /></li>
             <li><img src="./stR.svg" alt="" /></li>
           </ul>
-        <button onclick=(addToCart('${a[i].title}',${a[i].price}))>Add To Cart</button>
+        <button class="add-to-cart" onclick=(addToCart('${a[i].title}',${a[i].price}))>Add To Cart</button>
         </div>
       </div> `;
   }
@@ -110,8 +110,8 @@ function displayCart() {
     let li = document.createElement("li");
     let del = document.createElement("span");
     del.textContent = "⨉";
+    del.style.margin = "0.5rem";
     li.textContent = `${item.title} - ${item.price}  ლარი `;
-
 
     li.appendChild(del);
     cartItems.appendChild(li);
