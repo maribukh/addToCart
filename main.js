@@ -131,7 +131,9 @@ function delitem(index) {
   cart.splice(index, 1);
   displayCart();
 }
-
+//ეს არის დროებიოთ და გაასწორე
+let cartItems = document.getElementById("cartItems");
+cartItems.style.display = "none";
 function toggleCartDetails() {
   let cartItems = document.getElementById("cartItems");
 
